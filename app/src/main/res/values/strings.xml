@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Components</string>
+
+    <string-array name="spinner_static">
+        <item>Bola</item>
+        <item>Bicicleta</item>
+        <item>Carrinho</item>
+        <item>Corda</item>
+    </string-array>
+</resources>

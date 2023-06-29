@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linear_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button_toast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Toast me!" />
+
+    <Button
+        android:id="@+id/button_snack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Snack me!" />
+
+    <Spinner
+        android:id="@+id/spinner_estatico"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:entries="@array/spinner_static" />
+
+    <Spinner
+        android:id="@+id/spinner_dinamico"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_get_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:text="Get spinner" />
+
+        <Button
+            android:id="@+id/button_Set_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set spinner" />
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/seekbar_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:max="100" />
+
+    <TextView
+        android:id="@+id/text_seek_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_example"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Switch" />
+
+
+    <CheckBox
+        android:id="@+id/checkbox_example"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Checknbox"
+        />
+</LinearLayout>
