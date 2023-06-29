@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnIt
         // events
         binding.buttonToast.setOnClickListener(this)
         binding.buttonSnack.setOnClickListener(this)
+        binding.buttonProgress.setOnClickListener(this)
 
         binding.buttonGetSpinner.setOnClickListener(this)
         binding.buttonSetSpinner.setOnClickListener(this)
@@ -44,6 +45,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnIt
         when (v.id) {
             R.id.button_toast -> {
                 val toast = Toast.makeText(this, "Toast", Toast.LENGTH_SHORT)
+                //add progress bar
+                binding.progressbarHorizontal.incrementProgressBy(20)
                 toast.show()
             }
 
@@ -59,6 +62,18 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnIt
                 val value = binding.spinnerDinamico.selectedItem
                 val index = binding.spinnerDinamico.selectedItemId
                 val positionIndex = binding.spinnerDinamico.selectedItemPosition
+            }
+
+            R.id.button_progress -> {
+                val visibility = binding.progressbarLoad.visibility
+
+                if (visibility == View.VISIBLE) {
+                    binding.buttonProgress.text = "progress ON"
+                    binding.progressbarLoad.visibility = View.GONE
+                } else {
+                    binding.buttonProgress.text = "progress OFF"
+                    binding.progressbarLoad.visibility = View.VISIBLE
+                }
             }
         }
     }
