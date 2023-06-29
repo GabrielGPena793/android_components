@@ -36,6 +36,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnIt
 
         binding.switchExample.setOnCheckedChangeListener(this)
         binding.checkboxExample.setOnCheckedChangeListener(this)
+        binding.radioYes.setOnCheckedChangeListener(this)
 
     }
 
@@ -72,6 +73,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnIt
 
             R.id.checkbox_example -> {
                 val message = "Checkbox: $isChecked"
+                Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+            }
+
+            R.id.radio_yes -> {
+                val message = "Radio: $isChecked"
                 Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
             }
         }
